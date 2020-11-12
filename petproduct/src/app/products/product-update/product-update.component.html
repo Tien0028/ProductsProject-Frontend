@@ -1,0 +1,22 @@
+<button routerLink="/products">Back</button>
+<!-- Add Form here -->
+
+<form [formGroup]="productForm" (ngSubmit)="save()">
+  <!--Add form here -->
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Type:
+    <input type="text" formControlName="type">
+  </label>
+
+  <label>
+    Color:
+    <input type="text" formControlName="color">
+  </label>
+
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,13 @@
+
+<ul *ngIf="products">
+  <li *ngFor="let product of products">
+  <a routerLink="/products/{{product.id}}">
+    {{product.name}}
+    Type: {{product.type}}
+  </a>
+<button routerLink="/products-update/{{product.id}}">  Update </button>
+    <button (click)="delete(product.id)"> X </button>
+  </li>
+</ul>
+<h4 *ngIf="!products"> Loading....</h4>
+<button routerLink="/products-add"> Add Product </button>
